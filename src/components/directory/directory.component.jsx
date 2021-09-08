@@ -6,44 +6,44 @@ const Directory = ({items}) => {
 
     const [sections] = useState([
         {
-          title: 'hats',
-          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+          title: 'backgrounds',
+          imageUrl: 'https://img.itch.zone/aW1nLzI4NTE5ODcucG5n/original/RLGMLA.png',
           id: 1,
-          linkUrl: 'shop/hats'
+          linkUrl: 'shop/backgrounds'
         },
         {
-          title: 'jackets',
-          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+          title: 'icons',
+          imageUrl: 'https://img.itch.zone/aW1hZ2UvNTc1ODkyLzMwMzA4MjgucG5n/347x500/YfICkV.png',
           id: 2,
-          linkUrl: 'shop/jackets'
+          linkUrl: 'shop/icons'
         },
         {
-          title: 'sneakers',
-          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+          title: 'characters',
+          imageUrl: 'https://img.itch.zone/aW1hZ2UvMjU0MTE0LzEyMjA4NDkucG5n/347x500/VUFRph.png',
           id: 3,
-          linkUrl: 'shop/sneakers'
+          linkUrl: 'shop/characters'
         },
         {
-          title: 'womens',
-          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+          title: 'foliage',
+          imageUrl: 'https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/womens'
+          linkUrl: 'shop/foliage'
         },
         {
-          title: 'mens',
-          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+          title: 'others',
+          imageUrl: 'https://img.itch.zone/aW1hZ2UvODIxMDAzLzUxOTc3NTYucG5n/347x500/kJi0vI.png',
           size: 'large',
           id: 5,
-          linkUrl: 'shop/mens'
+          linkUrl: 'shop/others'
         }
       ])    
 
     return (
         <div className="directory-menu">
             {
-                sections.map(({id, title, imageUrl, size}) => (
-                    <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+                sections.map(({id, ...otherProps}) => (
+                    <MenuItem key={id} {...otherProps}/>
                 ))
             }
         </div>
